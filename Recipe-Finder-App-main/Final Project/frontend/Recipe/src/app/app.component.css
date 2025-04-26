@@ -1,0 +1,22 @@
+/* Apply margin and padding reset to all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply margin-top for all elements except the body */
+*:not(body) {
+  margin-top: 10px;
+}
+
+/* Reset body margin and set font-family */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Reset margin-top for the header */
+#header {
+  margin-top: 0;
+}

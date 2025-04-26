@@ -1,0 +1,8 @@
+<app-header id="header"></app-header>
+<app-filter (categorySelected)="onCategorySelected($event)"></app-filter>
+<br>
+<br>
+<router-outlet></router-outlet>
+
+<app-recipe-list [selectedCategory]="selectedCategory"></app-recipe-list>
+<app-recipes-details></app-recipes-details>

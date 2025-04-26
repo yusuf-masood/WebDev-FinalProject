@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+  }
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db;
+    padding: 10px 20px;
+    margin-top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  #logo h1 {
+    margin: 0;
+  }
+  #auth {
+    display: flex;
+    align-items: center;
+  }
+  #sign_in,
+  #sign_up,
+  #share {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Adjust spacing between sign in and sign up */
+  }
+  #sign_in h2,
+  #sign_up h2,
+  #share h2 {
+    margin: 0;
+    margin-left: 5px;
+    font-size: 20px; /* Adjust spacing between icon and text */
+  }
+  #sign_in img,
+  #sign_up img,
+  #share img {
+    width: 30px;
+    height: 30px;
+  }

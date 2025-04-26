@@ -1,0 +1,28 @@
+<div class="recipe-container">
+  <div class="recipe-list">
+    <h2>Recipe List</h2>
+    <ul>
+      <li *ngFor="let recipe of recipes; let i = index" (click)="showRecipeDetails(i)" class="recipe-item">
+        {{ recipe.title }}
+      </li>
+    </ul>
+  </div>
+  <div class="recipe-detail">
+    <h2>Recipe Detail</h2>
+    <div *ngIf="selectedRecipe !== null">
+      <p>Title: {{ selectedRecipe.title }}</p>
+      <p>Ingredients: {{ selectedRecipe.ingredients }}</p>
+      <p>Instructions: {{ selectedRecipe.instructions }}</p>
+      <p>Cooking Time: {{ selectedRecipe.cooking_time }} minutes</p>
+      <p>Difficulty: {{ selectedRecipe.difficulty }}</p>
+      <div>
+        <p>Image:</p>
+        <img *ngIf="selectedRecipe.image" [src]="selectedRecipe.image" alt="{{ selectedRecipe.title }}">
+        <p *ngIf="!selectedRecipe.image">No image available</p>
+      </div>
+    </div>
+    <div *ngIf="selectedRecipe === null">
+      <p>Select a recipe to view details</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div id="filter">
+  <form>
+    <input type="radio" id="chicken"
+     name="category" 
+     value="chicken"
+      [(ngModel)]="selectedButton"
+       (change)="onchangeEmit()">
+    <label for="chicken">{{ 'chicken('+  chicken+ ')' }}</label>
+
+
+    <input type="radio" id="vegetables" 
+    name="category" 
+    value="vegetables" 
+    [(ngModel)]="selectedButton"
+    (change)="onchangeEmit()">
+    <label for="vegetables">{{'vegetables ('+vegetables+')'}}</label>
+
+    <input type="radio"
+     id="plant" 
+     name="category"
+      value="plant" 
+       [(ngModel)]="selectedButton"
+       (change)="onchangeEmit()">
+    <label for="plant">{{'plant ('+plant+')'}}</label>
+
+    <input type="radio" 
+    id="grains"
+     name="category" 
+     value="grains"  
+     [(ngModel)]="selectedButton"
+     (change)="onchangeEmit()">
+    <label for="grains">{{'grains ('+grains+')'}}</label>
+
+    <input type="radio" 
+    id="dairy"
+     name="category" 
+     value="dairy" 
+      [(ngModel)]="selectedButton"
+      (change)="onchangeEmit()">
+    <label for="dairy">{{'dairy ('+dairy+')'}}</label>
+
+    <input type="radio" 
+    id="meat"
+     name="category"
+     value="meat" 
+      [(ngModel)]="selectedButton" 
+       (change)="onchangeEmit()">
+    <label for="meat">{{'meat('+meat+')'}}</label>
+  </form>
+</div>

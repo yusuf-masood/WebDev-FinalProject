@@ -1,0 +1,54 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.recipe-header {
+    display: flex;
+    align-items: center;
+}
+
+.recipe-image {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.recipe-title {
+    margin: 0;
+}
+
+.recipe-meta {
+    margin: 0;
+    font-size: 16px;
+}
+
+.recipe-details {
+    margin-top: 20px;
+}
+
+.ingredient-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredient-item {
+    margin-bottom: 5px;
+}
+
+.instructions {
+    margin-top: 10px;
+}
+
+.wine-pairing {
+    margin-top: 20px;
+}
+
+.summary {
+    margin-top: 20px;
+}
+
+.summary p {
+    margin-top: 10px;
+}

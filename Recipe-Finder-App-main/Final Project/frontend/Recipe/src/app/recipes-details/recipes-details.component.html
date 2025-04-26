@@ -1,0 +1,35 @@
+<div *ngIf="recipeDetail" class="container">
+    <div class="recipe-header">
+        <img [src]="recipeDetail.image" alt="Recipe Image" class="recipe-image">
+        <div class="recipe-info">
+            <h2 class="recipe-title">{{ recipeDetail.title }}</h2>
+            <p class="recipe-meta">
+                <strong>Ready in:</strong> {{ recipeDetail.readyInMinutes }} minutes &nbsp; | &nbsp;
+                <strong>Servings:</strong> {{ recipeDetail.servings }}
+            </p>
+        </div>
+    </div>
+    <div class="recipe-details">
+        <h3>Ingredients:</h3>
+        <ul class="ingredient-list">
+            <li class="ingredient-item" *ngFor="let ingredient of recipeDetail.extendedIngredients">
+                {{ ingredient.original }}
+            </li>
+        </ul>
+        <h3>Instructions:</h3>
+        <div class="instructions" [innerHTML]="recipeDetail.instructions"></div>
+    </div>
+    <div class="wine-pairing">
+        <h3>Wine Pairing:</h3>
+        <p *ngIf="recipeDetail.winePairing && recipeDetail.winePairing.pairedWines.length > 0">
+            Try pairing with: {{ recipeDetail.winePairing.pairedWines.join(', ') }}
+        </p>
+        <p *ngIf="recipeDetail.winePairing && recipeDetail.winePairing.pairingText">
+            {{ recipeDetail.winePairing.pairingText }}
+        </p>
+    </div>
+    <div class="summary">
+        <h3>Summary:</h3>
+        <p [innerHTML]="recipeDetail.summary"></p>
+    </div>
+</div>
